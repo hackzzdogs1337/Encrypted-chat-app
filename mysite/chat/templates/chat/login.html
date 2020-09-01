@@ -1,0 +1,10 @@
+{%extends 'chat/layout.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+    <legend class='border-bottom mb-5'>Login</legend>
+    <form method="POST" class='mt-5' action=''>
+        {%csrf_token%}
+        {{form|crispy}}
+        <button type="submit" class="btn btn-info">Signin</button>
+    </form>
+{%endblock%}
